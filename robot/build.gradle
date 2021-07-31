@@ -1,0 +1,26 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.happy3w'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	implementation('com.pi4j:pi4j-core:1.4')
+
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+	testImplementation 'junit:junit:4.12'
+}
